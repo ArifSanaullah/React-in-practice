@@ -1,3 +1,10 @@
 .Square {
     margin: 20px;
+    position: relative;
+}
+.squareControls {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    right: -200px;
 }
