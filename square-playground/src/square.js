@@ -49,23 +49,72 @@ import "./Square.css";
 
 
 
-export default function Square({ size, color }) {
-  let textInput;
-  const sizeInPx = `${size}px`;
-  const style = {
-    width: size,
-    height: size,
-    backgroundColor: color,
-  };
-  return (
-    <div className="Square" style={style}></div>
-  );
-}
-Square.protoTypes = {
-  color: PropTypes.string,
-  size: PropTypes.number.isRequired,
-};
+// export default function Square({ size, color }) {
+//   let textInput;
+//   const sizeInPx = `${size}px`;
+//   const style = {
+//     width: size,
+//     height: size,
+//     backgroundColor: color,
+//   };
+//   return (
+//     <div className="Square" style={style}></div>
+//   );
+// }
+// Square.protoTypes = {
+//   color: PropTypes.string,
+//   size: PropTypes.number.isRequired,
+// };
 
-Square.defaultProps = {
-  color: 'blue',
-};
+// Square.defaultProps = {
+//   color: 'blue',
+// };
+
+
+
+
+export default class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      x: 0,
+      y: 0,
+    };
+    this.squareRef = null;
+  }
+  updateCoords(e) {
+    const { clientX, clientY } = e;
+    const { left, top } = this.squareRef.getBoundingClientRect();
+    this.setState({
+      x: clientX - left,
+      y: clientY - top,
+    });
+  }
+  reset() {
+    this.setState ({
+        x: 0,
+        y: 0,
+    })
+  }
+  render() {
+    const size = `${this.props.size}px`;
+    const style = {
+      width: size,
+      height: size,
+      backgroundColor: this.props.initialColor,
+    };
+    return (
+      <div className="SquareContainer">
+        <div
+          ref={(e) => this.squareRef = e}
+          className="Square"
+          style={style}
+          onMouseMove={(e) => this.updateCoords(e)}
+          onMouseOut={() => this.reset()}
+        >
+          <div>{`${this.state.x}, ${this.state.y}`}</div>
+        </div>
+      </div>
+    )
+  }
+}

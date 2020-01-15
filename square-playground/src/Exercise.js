@@ -71,3 +71,21 @@ Exercise.defaultProps = {
   color: "blue",
   initialIsHidden: false
 };
+
+
+
+
+
+
+
+
+
+// export default function ClientAxis() {
+//   return <div className="main" width={200} height={200} color="blue"></div>;
+// }
+
+// ClientAxis.propTypes = {
+//   color: PropTypes.string,
+//   width: PropTypes.number,
+//   height: PropTypes.number,
+// }
