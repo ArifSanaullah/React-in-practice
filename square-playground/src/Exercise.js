@@ -6,8 +6,8 @@ export default class Exercise extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        currentColor: this.props.initialColor,
-        isHidden: this.props.initialIsHidden,
+      currentColor: this.props.color,
+      isHidden: this.props.initialIsHidden
     };
   }
   setCurrentColor(currentColor) {
@@ -15,14 +15,14 @@ export default class Exercise extends React.Component {
       currentColor
     });
   }
-    
-    toggleIsHidden() {
-        this.setState((currentState) => {
-            return {
-                isHidden: !currentState.isHidden,
-            };
-        })
-    }
+
+  toggleIsHidden() {
+    this.setState(currentState => {
+      return {
+        isHidden: !currentState.isHidden
+      };
+    });
+  }
   render() {
     const size = `${this.props.size}px`;
     console.log(this.state);
@@ -30,8 +30,8 @@ export default class Exercise extends React.Component {
     const style = {
       width: size,
       height: size,
-        backgroundColor: this.state.currentColor,
-      display: this.state.isHidden ? 'none' : 'block',
+      backgroundColor: this.state.currentColor,
+      display: this.state.isHidden ? "none" : "block"
     };
     return (
       <div className="main">
@@ -62,12 +62,12 @@ export default class Exercise extends React.Component {
 }
 
 Exercise.propTypes = {
-  initialColor: PropTypes.string,
-    size: PropTypes.number.isRequired,
-  initialIsHidden: PropTypes.bool,
+  color: PropTypes.string,
+  size: PropTypes.number.isRequired,
+  initialIsHidden: PropTypes.bool
 };
 
 Exercise.defaultProps = {
-    initialColor: "blue",
-    initialIsHidden: false,
+  color: "blue",
+  initialIsHidden: false
 };
