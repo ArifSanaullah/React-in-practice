@@ -1,0 +1,34 @@
+.Footer {
+    max-width: 100vw;
+    height: 100vh;
+    background-color: thistle;
+    display: flex;
+
+}
+
+.Footer__logo {
+    max-width: 48px;
+    flex: 1;
+}
+
+.Footer__Navig {
+    /* width: 33.333%; */
+    flex-direction: column;
+    flex: 1;
+    background-color: #fff;
+}
+
+.Footer__Navig > NavMenu > li {
+    flex: 1;
+    display: block;
+}
+
+.Footer__About {
+    flex: 1;
+    background-color: tomato;
+}
+
+.Footer__Policy {
+    flex: 1;
+    background-color: violet;
+}

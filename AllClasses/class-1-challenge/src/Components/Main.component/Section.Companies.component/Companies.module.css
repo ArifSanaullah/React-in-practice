@@ -1,0 +1,17 @@
+.Companies {
+    max-width: 100vw;
+    background-color: #fff;
+    padding: 48px 0px;
+}
+
+.Comp__h1 {
+    max-width: 512px;
+    margin: 0 auto 24px auto;
+    color: #333333;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.Comp__logos {
+    width: 512px;
+}

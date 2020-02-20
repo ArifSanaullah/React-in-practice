@@ -3,8 +3,9 @@ import style from "./NavBar.module.css";
 import NavMenu from "./NavMenu/NavMenu.component";
 import NavSearchBar from "./NavSearchBar/NavSearchBar.component";
 
+export const navItems = ["Products", "Pricing", "Documentation", "Community"];
+ 
 export default function NavBar() {
-  const navItems = ["Products", "Pricing", "Documentation", "Community"];
   return (
     <header>
       <nav className={style.navBar__navigation}>
