@@ -1,0 +1,15 @@
+.Cards {
+    width: 100%;
+
+}
+
+.Cards__container {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    /* justify-content: center; */
+
+}
+

@@ -1,0 +1,16 @@
+.Description {
+    max-width: 612px;
+    margin: 32px auto 24px auto;
+    padding: 24px 8px;
+    line-height: 1.6;
+    color: #333333;
+    text-align: center;
+    font-family: Poppins;
+}
+
+.Desc__h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 16px auto 16px auto;
+    width: 70%;
+}

@@ -1,0 +1,70 @@
+.Hero {
+    max-width: 100vw;
+    background-image: url(https://static.npmjs.com/attachments/ck3uwvv67mydydr74ea00ip4j-bg-stripes.png);
+    background-size: cover;
+    padding: 20px 30px;
+    text-align: center;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.Hero__container {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.Hero__container > div {
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+.Hero__mw1 {
+    max-width: 768px;
+    margin: 24px 0px;
+}
+
+.Hero__Headline {
+    font-size: 72px;
+    font-weight: 600;
+    font-family: Poppins, Roboto, sans-serif;
+}
+
+.Hero__mw2 {
+    max-width: 640px;
+}
+
+.Hero__h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+.Hero__Btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 560px;
+}
+
+.Hero__SignUpBtn, .Hero__LearnProBtn {
+    flex: 1;
+    margin: 4px 8px;
+    padding: 16px 8px;
+    min-width: 180px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.Hero__SignUpBtn {
+    background-color: #c12127;
+    border-bottom: 5px solid #fa8717;
+}
+
+.Hero__LearnProBtn {
+    background-color: #e81aa8;
+    border-bottom: 5px solid #b30ad2;
+}
