@@ -17,7 +17,7 @@ export default function NavBar() {
           </span>
         </div>
         <div className={style.navBar__right}>
-          <NavMenu NavItems={navItems} />
+          <NavMenu NavItems={navItems} flexDirection="row"/>
         </div>
       </nav>
       <NavSearchBar />

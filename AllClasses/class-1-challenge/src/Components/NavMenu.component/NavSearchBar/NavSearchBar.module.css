@@ -1,100 +1,100 @@
 .NavSearchBar {
-    width: 100%;
-    padding: 20px 10px;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  width: 100%;
+  padding: 20px 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .NavSearchBar > * {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .NavSearchBar__logo {
-    flex: 1;
-    max-width: 80px;
-    max-height: 25px;
-    min-width: 80px;
-    min-height: 25px;
-    cursor: pointer;
+  flex: 1;
+  max-width: 80px;
+  max-height: 25px;
+  min-width: 80px;
+  min-height: 25px;
+  cursor: pointer;
 }
 .NavSearchBar__SearchBar {
-    flex: 5;
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  flex: 5;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .NavSearchBar__Sign {
-    flex: 2;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    min-width: 180px;
-    max-width: 180px;
+  flex: 2;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  min-width: 180px;
+  max-width: 180px;
 }
 
 .SearchBar__SearchIcon {
-    /* flex: 1; */
-    width: 50px;
-    margin-left: 10px;
+  /* flex: 1; */
+  width: 50px;
+  margin-left: 10px;
 }
 
 .SearchBar__SearchInput {
-    flex: 3;
-    border: none;
-    background-color: #f2f2f2;
-    outline: none;
-    padding: 15px 10px;
-    font-size: 16px;
+  flex: 3;
+  border: none;
+  background-color: #f2f2f2;
+  outline: none;
+  padding: 15px 10px;
+  font-size: 16px;
 }
 .SearchBar__SearchBtn {
-    flex: 1;
-    cursor: pointer;
-    padding: 15px 25px;
-    background-color: #000000;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    flex-grow: 0;
+  flex: 1;
+  cursor: pointer;
+  padding: 15px 25px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  flex-grow: 0;
 }
 
-.NavSearchBar__SignUp, .NavSearchBar__SignIn {
-    flex: 1;
-    border: none;
-    padding: 15px 0px;
-    background-color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    min-width: 50%;
+.NavSearchBar__SignUp,
+.NavSearchBar__SignIn {
+  flex: 1;
+  border: none;
+  padding: 15px 0px;
+  background-color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  min-width: 50%;
 }
 
 .NavSearchBar__SignUp {
-    border: 1px solid rgba(0,0,0,0.2);
-    margin-right: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-right: 5px;
 }
 
-@media screen and (max-width: 540px) {
-    .NavSearchBar {
-        flex-direction: column;
-    }
-    .NavSearchBar__SearchBar {
-        flex-direction: column;
-        margin-top: 16px;
-        margin-bottom: 16px;
-    }
-    .NavSearchBar__SearchBar > * {
-        flex: 1;
-    }
-    .SearchBar__SearchIcon {
-        display: none;
-    }
-    .SearchBar__SearchBtn {
-        width: 100%;
-    }
+@media screen and (max-width: 740px) {
+  .NavSearchBar {
+    flex-direction: column;
+  }
+  .SearchBar__SearchIcon {
+    display: none;
+  }
+  .NavSearchBar__SearchBar {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .SearchBar__SearchBtn {
+    width: 100%;
+  }
 }

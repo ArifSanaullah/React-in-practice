@@ -1,11 +1,15 @@
 .navMenu {
     height: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     flex: 1;
+    margin-left: auto;
 }
 .navMenu > li {
     flex-grow: 1;
@@ -17,3 +21,14 @@
 .navMenu > li:hover {
     filter: opacity(.5);
 }
+
+
+
+@media screen and (max-width: 640px) {
+  
+    .navMenu {
+        margin: 0 auto;
+    }
+
+}
+

@@ -42,7 +42,7 @@
   align-self: flex-end;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 640px) {
   .navBar__left {
     flex: 0;
     display: none;
