@@ -1,0 +1,112 @@
+.Filter {
+    display: flex;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.Filter:not(:last-child) {
+    margin: 0 1rem 0 0;
+}
+
+.filterContainer {
+    margin: 0 1rem;
+}
+
+.filterButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.filterLabel {
+    /* margin-left: .5rem; */
+}
+
+.dropDown {
+    display: flex;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.filterPlaceholder {
+    /* background-color: blue; */
+    width: calc(100% - 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #c3c3c3;
+    border-radius: .3rem;
+    color: #5c5c5c;
+    cursor: pointer;
+    padding: .3rem .5rem;
+    margin-left: 1rem;
+}
+
+.filterDownIcon {
+    color: #5c5c5c;
+    width: 1.5rem;
+    font-size: 1.2rem;
+    margin-left: .7rem;
+    transition: transform .3s;
+}
+
+.filterDownIconAnimated {
+    transform: rotate(180deg);
+}
+
+.dropDownList {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    list-style: none;
+    background-color: #dddddd;
+    width: 100%;
+    border: 1px solid #c5c5cc;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    z-index: 500;
+    
+    /* top: 0;
+    visibility: hidden;
+    opacity: 0; */
+}
+
+.dropDownListAnimated {
+    top: 5rem;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s cubic-bezier(.23,1,.32,1);
+}
+
+
+.dropDownList:not(:last-child) {
+    margin: 0 1rem;
+    display: none;
+}
+
+.dropDownListItem {
+    width: 100%;
+    display: flex;
+}
+
+.dropDownListItemBtn {
+    cursor: pointer;
+    outline: none;
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    text-align: left;
+    padding: .7rem 1rem;
+
+}
+
+.dropDownListItem:not(:last-child) {
+    border-bottom: 1px solid #e2e2e2;
+}

@@ -1,0 +1,10 @@
+.Setting {
+    display: flex;
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    align-items: center;
+}
+
+.Setting > svg {
+    margin: 0 1rem 0 2rem;
+}

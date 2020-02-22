@@ -1,0 +1,6 @@
+.searchFilters {
+       /* background-color: khaki; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

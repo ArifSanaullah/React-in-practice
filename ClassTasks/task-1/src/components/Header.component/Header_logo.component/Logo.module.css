@@ -1,0 +1,20 @@
+.Logo {
+    width: 26rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.Logo__img {
+    display: block;
+    height: calc(100% - 1rem);
+    margin-left: .5rem;
+}
+
+.Logo__label {
+    padding: 0 1rem;
+    text-align: left;
+}
