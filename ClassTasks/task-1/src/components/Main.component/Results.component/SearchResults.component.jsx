@@ -11,9 +11,9 @@ export default class SearchResults extends React.Component {
     return (
       <section className={style.searchResults}>
         <div className={style.searchResultsContainer}>
-          {posts.map(post => {
+          {posts.map((post, index) => {
             return (
-              <article className={style.story}>
+              <article className={style.story} key={index}>
                 <div className={style.storyContainer}>
                   <div className={style.storyData}>
                     <div className={style.storyTitle}>
