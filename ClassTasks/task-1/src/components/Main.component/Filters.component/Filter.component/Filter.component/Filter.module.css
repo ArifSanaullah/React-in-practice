@@ -34,8 +34,9 @@
     border-radius: .3rem;
     color: #5c5c5c;
     cursor: pointer;
-    padding: .3rem .5rem;
+    padding: 0rem .8rem;
     margin-left: 1rem;
+    font-size: 1.4rem;
 }
 
 .filterDownIcon, .filterDownIconAnimated {
@@ -99,4 +100,14 @@
 
 .dropDownListItem:not(:last-child) {
     border-bottom: 1px solid #e2e2e2;
+}
+
+@media screen and (max-width: 768px) {
+    .filterButton span {
+        display: none;
+    }
+
+    .Filter:not(:last-child) {
+    margin: 0 -.3rem 0 0;
+}
 }

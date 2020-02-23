@@ -1,10 +1,16 @@
 .Setting {
     display: flex;
-    margin: 0 1rem;
-    font-size: 1.8rem;
+    margin: 0 .5rem 0 1rem;
+    font-size: 1.6rem;
     align-items: center;
 }
 
 .Setting > svg {
     margin: 0 1rem 0 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .Setting span {
+        display: none;
+    }   
 }

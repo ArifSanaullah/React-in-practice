@@ -6,9 +6,11 @@
 }
 .paginationContainer {
   display: flex;
-  list-style: none;
+  flex-wrap: wrap;
   align-items: center;
-  margin: 0 auto;
+  justify-content: center;
+  list-style: none;
+  padding: 0 1rem;
 }
 
 .paginationContainer li {

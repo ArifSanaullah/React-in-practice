@@ -1,6 +1,11 @@
-.searchFilters {
-       /* background-color: khaki; */
+.searchFilters {   /* background-color: khaki; */
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .searchFilters {
+        justify-content: flex-end;
+    }
 }
