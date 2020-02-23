@@ -10,11 +10,13 @@ export default class Filters extends React.Component {
           listItems={["All", "Stories", "Comments"]}
           filterLabel="Search"
           placeholder="Stories"
+          isShown={false}
         />
         <Filter
           listItems={["Popularity", "Date"]}
           filterLabel="by"
           placeholder="Popularity"
+          isShown={false}
         />
         <Filter
           listItems={[
@@ -27,11 +29,10 @@ export default class Filters extends React.Component {
           ]}
           filterLabel="for"
           placeholder="All time"
+          isShown={false}
         />
       </div>
     );
   }
 }
 
-/*<Square initialColor="green" size={100} />
-<Square initialColor="red" size={200} />*/

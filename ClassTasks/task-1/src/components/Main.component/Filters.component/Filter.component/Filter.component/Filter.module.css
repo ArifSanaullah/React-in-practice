@@ -8,19 +8,11 @@
     margin: 0 1rem 0 0;
 }
 
-.filterContainer {
-    margin: 0 1rem;
-}
-
 .filterButton {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 1.2rem;
-}
-
-.filterLabel {
-    /* margin-left: .5rem; */
 }
 
 .dropDown {
@@ -34,7 +26,6 @@
 }
 
 .filterPlaceholder {
-    /* background-color: blue; */
     width: calc(100% - 2rem);
     display: flex;
     align-items: center;
@@ -47,7 +38,7 @@
     margin-left: 1rem;
 }
 
-.filterDownIcon {
+.filterDownIcon, .filterDownIconAnimated {
     color: #5c5c5c;
     width: 1.5rem;
     font-size: 1.2rem;
@@ -59,7 +50,7 @@
     transform: rotate(180deg);
 }
 
-.dropDownList {
+.dropDownList, .dropDownListAnimated {
     padding: 0;
     margin: 0;
     position: absolute;
@@ -72,9 +63,9 @@
     box-shadow: 0 0 5px rgba(0,0,0,.1);
     z-index: 500;
     
-    /* top: 0;
+    top: 0;
     visibility: hidden;
-    opacity: 0; */
+    opacity: 0;
 }
 
 .dropDownListAnimated {
@@ -87,7 +78,6 @@
 
 .dropDownList:not(:last-child) {
     margin: 0 1rem;
-    display: none;
 }
 
 .dropDownListItem {
