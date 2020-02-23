@@ -196,16 +196,50 @@ const comments = [
   "781 comments"
 ];
 
+const goesTos = [
+  "https://news.ycombinator.com/item?id=16582136",
+  "https://news.ycombinator.com/item?id=11116274",
+  "https://news.ycombinator.com/item?id=3078128",
+  "https://news.ycombinator.com/item?id=13682022",
+  "https://news.ycombinator.com/item?id=22107823",
+  "https://news.ycombinator.com/item?id=15924794",
+  "https://news.ycombinator.com/item?id=3742902",
+  "https://news.ycombinator.com/item?id=20052623",
+  "https://news.ycombinator.com/item?id=13718752",
+  "https://news.ycombinator.com/item?id=11966167",
+  "https://news.ycombinator.com/item?id=6201586",
+  "https://news.ycombinator.com/item?id=21190265",
+  "https://news.ycombinator.com/item?id=20260863",
+  "https://news.ycombinator.com/item?id=18138328",
+  "https://news.ycombinator.com/item?id=12707606",
+  "https://news.ycombinator.com/item?id=21401973",
+  "https://news.ycombinator.com/item?id=19109474",
+  "https://news.ycombinator.com/item?id=22050802",
+  "https://news.ycombinator.com/item?id=12073675",
+  "https://news.ycombinator.com/item?id=8595905",
+  "https://news.ycombinator.com/item?id=19632449",
+  "https://news.ycombinator.com/item?id=18064537",
+  "https://news.ycombinator.com/item?id=16619917",
+  "https://news.ycombinator.com/item?id=18052923",
+  "https://news.ycombinator.com/item?id=16065845",
+  "https://news.ycombinator.com/item?id=3288671",
+  "https://news.ycombinator.com/item?id=21611677",
+  "https://news.ycombinator.com/item?id=22236106",
+  "https://news.ycombinator.com/item?id=19719380",
+  "https://news.ycombinator.com/item?id=15316175"
+];
+
 const posts = story_titles.map((title, index) => {
   return {
     title: title,
-    source: story_srcs[index],
+    source: `(${story_srcs[index]})`,
     points: points[index],
     username: usernames[index],
     postedOn: postedOns[index],
-    comments: comments[index]
+    comments: comments[index],
+    goesTo: goesTos[index]
   };
 })
-console.log(posts);
 
 export default posts;
+
