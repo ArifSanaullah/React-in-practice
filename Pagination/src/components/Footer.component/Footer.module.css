@@ -1,0 +1,38 @@
+.Footer {
+    width: 100%;
+    background-color: #fff;
+    height: 5rem;
+    font-size: 1.6rem;
+    margin: 0 auto;
+}
+
+.footerList {
+    width: 80%;
+    max-width: 60rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 2rem auto;
+    padding: 0;
+}
+
+.footerListItem {
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+    position: relative;
+}
+
+.footerListItem:not(:last-child)::after {
+    content: "";
+    width: .4rem;
+    height: .4rem;
+    position: absolute;
+    top: 1.3rem;
+    right: -.3rem;
+    background-color: #000000;
+    border-radius: 50%;
+}
+

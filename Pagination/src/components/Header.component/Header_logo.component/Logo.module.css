@@ -1,0 +1,33 @@
+.Logo {
+    width: 26rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.Logo__img {
+    display: block;
+    height: calc(100% - 1rem);
+    margin-left: .5rem;
+}
+
+.Logo__label {
+    padding: 0 1rem;
+    text-align: left;
+    font-size: 1.8rem;
+}
+
+@media screen and (max-width: 768px) {
+    .Logo__label {
+        display: none;
+    }
+    .Logo {
+        width: fit-content;
+    }
+    .Logo__img {
+        margin-right: 2rem;
+    }
+}

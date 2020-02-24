@@ -1,0 +1,16 @@
+.Btn {
+  margin-right: 0.3em;
+  color: blue;
+  user-select: none;
+  cursor: pointer;
+}
+
+.pageNumbers {
+  list-style: none;
+  display: flex;
+}
+
+.pageNumbers > li {
+    padding: 1rem;
+    cursor: pointer;
+}

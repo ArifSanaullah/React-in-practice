@@ -1,0 +1,96 @@
+.Meta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem 1rem;
+    font-size: 1.2rem;
+    padding: .5rem 0;
+    position: relative;
+}
+
+.processingTime {
+    flex: 2;
+    width: 100%;
+    margin: 0 2rem;
+}
+
+.socialShare {
+    justify-self: flex-end;
+    color: #9d9d9d;
+    cursor: pointer;
+    width: 2rem;
+}
+
+.socialMediaList, .socialMediaListAnimated {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 22rem;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid #c5c5cc;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.socialMediaListAnimated {
+    top: 5.7rem;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s;
+}
+
+.socialItem {
+    list-style: none;
+    flex: 1;
+    width: 100%;
+}
+
+.socialButton {
+    color: #9d9d9d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 1rem;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.socialButton:hover {
+    color: #ff742b;
+}
+
+.socialItem:not(:last-child) {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.socialButton p {
+    font-size: 1.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 1rem 0 0;
+    padding: 0;
+}
+
+
+.socialButton img {
+    display: block;
+    width: 2rem;
+    filter: opacity(.2)
+}
+
+@media screen and (max-width: 768px) {
+    .Meta {
+        display: none;
+    }
+}
