@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import style from "./LogIn.module.css";
-import Main from "../Main.component/Main.component";
-
-
 
 export default class LogIn extends Component {
   constructor(props) {
@@ -54,8 +51,8 @@ export default class LogIn extends Component {
     e.preventDefault();
     this.setState(() => {
       const isFormValid = this.validateForm(this.state.errors);
-      return { isFormValid: isFormValid, isActive: !isFormValid }
-    })
+      return { isFormValid: isFormValid, isActive: !isFormValid };
+    });
   }
 
   validateForm(errors) {
@@ -63,11 +60,10 @@ export default class LogIn extends Component {
   }
 
   render() {
-    // if (!this.state.isActive) return null;
+    if (!this.state.isActive) return null;
     const { errors } = this.state;
     return (
-      <div className="Main">
-        <div className={style.wrapper}>
+      <div className={style.wrapper}>
         <div className={style.form__wrapper}>
           <h2>Register</h2>
           <form onSubmit={this.handleSubmit} noValidate>
@@ -115,11 +111,7 @@ export default class LogIn extends Component {
             </div>
           </form>
         </div>
-        </div>
-        {this.state.isFormValid && <Main isActive={this.state.isFormValid} />}
       </div>
     );
   }
 }
-
-// export const isActive = this.state.isActive;

@@ -1,0 +1,17 @@
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Nav > ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul > li {
+  margin: 0 1rem;
+  cursor: pointer;
+}
