@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import style from "./LogIn.module.css";
+import propTypes from "prop-types";
 
 export default class LogIn extends Component {
   constructor(props) {
@@ -10,6 +11,8 @@ export default class LogIn extends Component {
       password: null,
       isFormValid: false,
       isActive: true,
+      handleLoginIsActive: this.props.loginIsActive,
+      handleIsActive: this.props.activeHandler,
       errors: {
         fullName: " ",
         password: " ",
@@ -60,7 +63,7 @@ export default class LogIn extends Component {
   }
 
   render() {
-    if (!this.state.isActive) return null;
+    if(!this.state.isActive) return null
     const { errors } = this.state;
     return (
       <div className={style.wrapper}>
@@ -107,11 +110,16 @@ export default class LogIn extends Component {
               <small>Password must be eight characters in length.</small>
             </div>
             <div className={style.submit}>
-              <button>Create</button>
+              <button onClick={this.state.handleLoginIsActive}>Create</button>
             </div>
           </form>
         </div>
       </div>
     );
   }
+}
+
+LogIn.propTypes = {
+  activeHandler: propTypes.func,
+  loginIsActive: propTypes.func
 }

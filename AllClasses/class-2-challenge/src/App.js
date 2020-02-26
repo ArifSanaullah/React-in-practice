@@ -13,9 +13,11 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      currentScreen: "Home"
+      currentScreen: "Home",
+      loginIsActive: true
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleIsActive = this.handleIsActive.bind(this);
   }
 
   handleClick(e) {
@@ -26,20 +28,33 @@ export default class App extends React.Component {
     this.setState({ currentScreen: screen });
   }
 
+  handleIsActive() {
+    console.log("handleIsActive");
+    this.setState({ loginIsActive: false });
+  }
+
   render() {
     const { currentScreen } = this.state;
     return (
       <div className="App">
-        <LogIn />
-        <Header handleClick={this.handleClick} />
-        <div className="main">
-          {currentScreen === "About" && <About />}
-          {currentScreen === "Services" && <Services />}
-          {currentScreen === "Home" && <Home />}
-          {currentScreen === "Contact" && <Contact />}
-          {currentScreen === "Feedback" && <Feedback />}
-        </div>
-        <Footer />
+        <LogIn
+          loginIsActive={this.handleIsActive}
+          activeHandler={this.handleIsActive}
+        />
+
+        {!this.state.loginIsActive && (
+          <div>
+            <div className="main">
+              <Header handleClick={this.handleClick} />
+              {currentScreen === "About" && <About />}
+              {currentScreen === "Services" && <Services />}
+              {currentScreen === "Home" && <Home />}
+              {currentScreen === "Contact" && <Contact />}
+              {currentScreen === "Feedback" && <Feedback />}
+            </div>
+            <Footer />
+          </div>
+        )}
       </div>
     );
   }
