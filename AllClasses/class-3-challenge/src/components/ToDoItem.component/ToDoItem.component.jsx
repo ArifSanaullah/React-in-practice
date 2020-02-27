@@ -1,16 +1,15 @@
 import React, { Component } from "react";
-import Button from "../Button.component/Button.component";
+import style from "./ToDoItem.module.css";
 
 export default class ToDoItem extends Component {
   render() {
     return (
-      <div>
-        <li>{this.props.todo}</li>{" "}
-        <Button
-          buttonValue="Delete Todo"
-          clickHandler={this.props.deleteHandler}
-        />
-      </div>
+      <li className={style.todoItem}>
+        <div className={style.todoContent} >{this.props.todo}</div>
+        <div onClick={this.props.deleteHandler} className={style.deleteButton}>
+          X
+        </div>
+      </li>
     );
   }
 }
