@@ -12,7 +12,7 @@ export default class ToDoList extends Component {
             <TodoItem
               todo={item}
               key={index}
-              deleteHandler={() => this.props.deleteHandler(item)}
+              deleteHandler={this.props.deleteHandler}
             />
           ))}
         </ul>
