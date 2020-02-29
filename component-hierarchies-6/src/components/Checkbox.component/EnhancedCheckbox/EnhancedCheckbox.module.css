@@ -1,0 +1,8 @@
+.enhancedCheckboxContainer {
+  margin: 10px 0;
+}
+
+.enhancedCheckboxContainerSelected {
+  background-color: cadetblue;
+  padding: 5px 10px;
+}
