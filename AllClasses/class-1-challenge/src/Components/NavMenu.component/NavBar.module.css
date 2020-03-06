@@ -1,7 +1,6 @@
 .navBar__navigation {
   max-width: 100vw;
-  padding: 20px 0px;
-  /* background-color: #f4f4f4;  */
+  padding: 12px 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10,6 +9,7 @@
   border-top-style: solid;
   border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;
 }
+
 .navBar__left {
   flex: 1;
   align-self: flex-start;
@@ -20,16 +20,14 @@
 }
 
 .navBar__heart {
-  font-size: 30px;
-  margin: -20px 10px 0px 0px;
-  width: 20px;
-  height: 20px;
+  font-size: 20px;
+  margin: 0px 20px 0px 0px;
   background-repeat: no-repeat;
-  cursor: pointer;
 }
 
 .navBar__textContent {
-    cursor: pointer;
+  cursor: pointer;
+  font-weight: lighter;
 }
 
 .navBar__heart:hover,

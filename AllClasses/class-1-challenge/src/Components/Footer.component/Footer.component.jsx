@@ -2,6 +2,33 @@ import React from "react";
 import style from "./Footer.module.css";
 import NavMenu from "../NavMenu.component/NavMenu/NavMenu.component";
 
+const navItemsHelp = [
+  { title: "Help" },
+  { title: "Documentation" },
+  { title: "Community" },
+  { title: "Resources" },
+  { title: "Advisories" },
+  { title: "Status" },
+  { title: "Contact" }
+];
+
+const navItemsAbout = [
+  { title: "About" },
+  { title: "Company" },
+  { title: "Blog" },
+  { title: "Careers" },
+  { title: "Webinars" },
+  { title: "Press" },
+  { title: "Newsletter" }
+];
+
+const navItemsPolicy = [
+  { title: "Terms & Policies" },
+  { title: "Policies" },
+  { title: "Terms of Use" },
+  { title: "Code of Conduct" }
+];
+
 export default function Footer() {
   return (
     <footer className={style.Footer}>
@@ -16,43 +43,13 @@ export default function Footer() {
           </svg>
         </div>
         <div className={style.Footer__Navig}>
-          <NavMenu
-            NavItems={[
-              "Help",
-              "Documentation",
-              "Commmunity",
-              "Resources",
-              "Advisories",
-              "Status",
-              "Contact"
-            ]}
-            flexDirection="column"
-          />
+          <NavMenu flexDirection="column" NavItems={navItemsHelp} />
         </div>
         <div className={style.Footer__About}>
-          <NavMenu
-            NavItems={[
-              "About",
-              "Company",
-              "Blog",
-              "Careers",
-              "Webinars",
-              "Press",
-              "Newsletter"
-            ]}
-            flexDirection="column"
-          />
+          <NavMenu NavItems={navItemsAbout} flexDirection="column" />
         </div>
         <div className={style.Footer__Policy}>
-          <NavMenu
-            NavItems={[
-              "Terms & Policies",
-              "Policies",
-              "Terms of Use",
-              "Code of Conduct"
-            ]}
-            flexDirection="column"
-          />
+          <NavMenu NavItems={navItemsPolicy} flexDirection="column" />
         </div>
       </div>
     </footer>

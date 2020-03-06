@@ -1,8 +1,7 @@
 import React from "react";
 import style from "./NavSearchBar.module.css";
 
-export default function NavSearchBar() {
-  const svgSearchIcon = (
+const svgSearchIcon = (
     <svg
       className={style.SearchBar__SearchIcon}
       width="15px"
@@ -30,9 +29,10 @@ export default function NavSearchBar() {
       </g>
     </svg>
   );
+export default function NavSearchBar() {
   return (
     <div className={style.NavSearchBar}>
-      <div className={style.NavSearchBar__logo}>
+      <div className={style.NavSearchBar__logo} >
         <svg viewBox="0 0 780 250">
           <path
             fill="#231F20"
