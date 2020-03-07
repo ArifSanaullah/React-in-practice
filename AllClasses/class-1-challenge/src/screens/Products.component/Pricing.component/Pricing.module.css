@@ -1,0 +1,27 @@
+.PricingHero {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Pricing {
+}
+
+.ProductsCards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: aquamarine;
+  flex-wrap: wrap;
+}
+
+.ProductsCards > div {
+  flex: 1;
+  min-width: 100%;
+}
+
+.ProductsCard {
+  background-color: blue;
+}

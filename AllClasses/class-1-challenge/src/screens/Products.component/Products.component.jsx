@@ -1,9 +1,10 @@
 import React from 'react'
+import Pricing from './Pricing.component/Pricing.component'
 
 export default function Products() {
     return (
         <div>
-            <h1>Products</h1>
+            <Pricing />
         </div>
     )
 }
