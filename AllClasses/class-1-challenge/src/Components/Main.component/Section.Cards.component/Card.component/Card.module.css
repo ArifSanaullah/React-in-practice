@@ -14,11 +14,15 @@
   margin: 12px 0;
 }
 
+.CTAContainer {
+  width: 100%;
+}
+
 .Card__CTA {
   width: 100%;
   height: 100%;
   background-color: transparent;
-  padding: 12px 24px;
+  padding: 12px;
   margin: 0 auto 0 0;
   margin-top: 16px;
   border: 1px solid #000000;
@@ -28,11 +32,15 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  outline: none;
 }
 
 @media screen and (max-width: 1000px) {
   .Card {
     width: 50%;
+  }
+  .ProductsCard {
+    width: auto;
   }
 }
 
@@ -45,25 +53,135 @@
 /* Products card designs */
 
 .ProductsCard {
-  max-width: 100%;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   margin: 10px;
-  background-color: blue;
-}
-
-.ProductsCard img {
-  width: 100%;
+  background-color: #999999;
+  padding: 16px;
+  margin-bottom: -80px; /*TODO: fix downshifting of cards*/
 }
 
 .ProductsCardLight {
-  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .ProductsCardHeader {
+  width: calc(100% + 32px);
+  margin: -16px 0 0 -16px;
+  text-transform: uppercase;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #fff;
+}
+
+.ProductsCardLight .ProductsCardHeader {
+  background-color: #333333;
 }
 
 .ProductsCover {
-  width: 100%;
+  width: calc(100% + 32px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.ProductsCover img {
+  height: auto;
+  max-width: 100%;
+}
+
+.ProductsCardLight .ProductsCover {
+  margin-top: 0;
 }
 
 .ProductsHeader {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: Roboto;
+}
+
+.ProductsHeader h1 {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.ProductsCardLight .ProductsHeader {
+  color: #333333;
+}
+
+.currency {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: top;
+  font-size: 36px;
+  font-weight: lighter;
+  margin: 8px 5px 0 0;
+  font-family: Arimo, sans-serif;
+  line-height: 41px;
+}
+
+.ProductsCardLight .currency {
+  color: #999999;
+}
+
+.currency ~ h1 {
+  display: inline-block;
+  font-size: 72px;
+  text-align: center;
+  font-family: Arimo, sans-serif;
+  font-weight: lighter;
+  margin-bottom: -0px;
+}
+
+.ProductsCard small {
+  box-sizing: border-box;
+  color: #333333;
+  display: block;
+  font-family: Arimo, sans-serif;
+  font-size: 12.8px;
+  height: 14px;
+  line-height: 14.72px;
+  text-align: center;
+  text-size-adjust: 100%;
+  width: 192px;
+  font-weight: 200;
+  letter-spacing: 0.3px;
+}
+
+.ProductsCard small:last-child {
+  margin-bottom: 28px;
+}
+
+.content {
+  padding: 10px 30px;
+  text-align: center;
+  margin: 0 auto;
+  color: #333333;
+  font-family: Arimo, sans-serif;
+  height: 52px;
+  line-height: 18.4px;
+}
+
+.ProductsCard .CTAContainer {
+  margin-bottom: 20px;
+}
+
+.ProductsCard .ProductsCTA {
+  margin-top: 80px;
+  padding: 16px 0px;
+}
+
+.ProductsCardLight .ProductsCTA {
+  margin-top: 16px;
 }

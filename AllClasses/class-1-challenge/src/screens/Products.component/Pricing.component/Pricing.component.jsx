@@ -11,9 +11,9 @@ const cardsData = [
     heading: "Free",
     currency: "$",
     bundleRate: "0",
-    perDuration: "",
+    perDuration: [],
     content: ["Unlimited public packages"],
-        ctaLabel: "create",
+    ctaLabel: "create",
     lightTheme: false
   },
   {
@@ -24,13 +24,13 @@ const cardsData = [
     heading: "Pro",
     currency: "$",
     bundleRate: "7",
-    perDuration: "per month",
+    perDuration: ["per month"],
     content: [
       "Unlimited public packages",
       "Unlimited private packages",
       "Package-based permissions"
     ],
-      ctaLabel: "get started",
+    ctaLabel: "get started",
     lightTheme: true
   },
   {
@@ -41,13 +41,13 @@ const cardsData = [
     heading: "Teams",
     currency: "$",
     bundleRate: "7",
-    perDuration: "per user per month",
+    perDuration: ["per user", "per month"],
     content: [
       "Unlimited public packages",
       "Unlimited private packages",
       "Team-based permissions"
     ],
-      ctaLabel: "get started",
+    ctaLabel: "get started",
     lightTheme: true
   },
   {
@@ -55,12 +55,12 @@ const cardsData = [
     header: "the ultimate in enterprise javascript",
     imageURL:
       "https://static.npmjs.com/attachments/ck3uwdz2272xb8874zxys9s9r-enterprise.png",
-    heading: "Eterprise",
+    heading: "Enterprise",
     currency: "$",
     bundleRate: "10K",
-    perDuration: "per month",
+    perDuration: ["per month"],
     content: "",
-      ctaLabel: "contact sales",
+    ctaLabel: "contact sales",
     lightTheme: false
   }
 ];
@@ -69,7 +69,7 @@ export default function Pricing() {
   return (
     <section className={`herobg ${style.PricingHero}`}>
       <div className={style.Pricing}>
-        <div>
+        <div className={style.Header}>
           <h1>Pricing</h1>
         </div>
         <div className={style.ProductsCards}>
