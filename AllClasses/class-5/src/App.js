@@ -1,15 +1,16 @@
 import React from "react";
 import "./App.css";
 import { connect } from "react-redux";
+import CheckNumber from "./CheckNumber";
 
 const changeUserName = (props) => {
-  console.log(props);
   return { type: "CHANGE_USERNAME", payload: { user: { name: "Osama" } } };
 };
 
 const increment = (prevNum) => {
   return { type: "INCREMENT", payload: { number: prevNum + 1 } };
 };
+
 const decrement = (prevNum) => {
   return { type: "INCREMENT", payload: { number: prevNum - 1 } };
 };
@@ -32,7 +33,7 @@ class App extends React.Component {
         >
           Decrement
         </button>
-        <h1>{this.props.number}</h1>
+        <CheckNumber />
       </div>
     );
   }
