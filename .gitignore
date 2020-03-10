@@ -11,7 +11,8 @@
 # production
 /build
 
-# misc
+#misc
+class-4/
 .DS_Store
 .env.local
 .env.development.local
@@ -23,4 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 .gitignore
-class-4
+./.gitignore
