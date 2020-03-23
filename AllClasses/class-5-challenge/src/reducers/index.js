@@ -41,7 +41,7 @@ const reducer = (state = initialState, action) => {
     case actionTypes.handleCompleted:
       console.log(state);
       return {
-        ...state, renderedTodos: todos.map((todo, index) => {
+        ...state, renderedTodos: todos.map((todo) => {
           if (todo === payload.dummy.todo) {
           return {...state, renderedTodos: renderedTodos[todo]}
           }
