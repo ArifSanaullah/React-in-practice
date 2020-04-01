@@ -1,16 +1,22 @@
 import React, { Component } from "react";
-import authMiddleware from "../../middlewares/authMiddlewares";
+import postsMiddlewares from "../../middlewares/postsMiddlewares";
 import { connect } from "react-redux";
 
 class Posts extends Component {
   render() {
-    const { authMiddleware, loading, users, errorMessage } = this.props;
+    const { postsMiddlewares, loading, posts, errorMessage } = this.props;
+    console.log(posts);
     return (
       <div>
-        <button onClick={() => authMiddleware()}>Get Posts</button>
+        <button onClick={() => postsMiddlewares()}>Get Posts</button>
+        <form action="">
+          <select name="posts" id="posts">
+            <option value="arif">Arif</option>
+          </select>
+        </form>
         {loading && <div>Loading data</div>}
-        {users ? (
-          users.map((post, index) => {
+        {posts ? (
+          posts.map((post, index) => {
             const { id, userId, title, body } = post;
             return (
               <div key={index}>
@@ -31,10 +37,10 @@ class Posts extends Component {
   }
 }
 
-const mapStateToProps = (state) => state.authReducers;
+const mapStateToProps = (state) => state.postsReducers;
 
 const mapDispatchToProps = (dispatch) => ({
-  authMiddleware: () => dispatch(authMiddleware())
+  postsMiddlewares: () => dispatch(postsMiddlewares())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Posts);

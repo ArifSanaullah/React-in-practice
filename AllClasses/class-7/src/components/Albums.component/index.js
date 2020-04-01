@@ -43,7 +43,7 @@ class Albums extends Component {
             onChange={(event) => getUserToBeFiltered(event)}
           >
             {loading && <option>Loading users</option>}
-            {!loading && <option value="select">Select User</option>}
+            {!loading && !errorMessage && <option>Select User</option>}
             {users ? (
               users.map((user) => {
                 return (

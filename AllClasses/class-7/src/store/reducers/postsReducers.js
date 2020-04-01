@@ -1,35 +1,35 @@
-import * as authActions from "../actionTypes";
+import { GET_POSTS, GET_POSTS_SUCCESS, GET_POSTS_FAIL } from "../actionTypes";
 
 const initialState = {
-  users: null,
+  posts: null,
   errorMessage: "",
   loading: false
 };
 
-const authReducers = (state = initialState, action) => {
+const postsReducers = (state = initialState, action) => {
   switch (action.type) {
-    case authActions.USER_LOGIN:
+    case GET_POSTS:
       return {
         ...state,
         loading: action.payload.loading,
         errorMessage: "",
-        users: null
+        posts: null
       };
 
-    case authActions.USER_LOGIN_SUCCESS:
+    case GET_POSTS_SUCCESS:
       return {
         ...state,
-        users: action.payload.users,
+        posts: action.payload.posts,
         loading: false,
         errorMessage: ""
       };
 
-    case authActions.USER_LOGIN_FAIL:
+    case GET_POSTS_FAIL:
       return {
         ...state,
         errorMessage: action.payload.errorMessage,
         loading: false,
-        users: null
+        posts: null
       };
 
     default:
@@ -37,4 +37,4 @@ const authReducers = (state = initialState, action) => {
   }
 };
 
-export default authReducers;
+export default postsReducers;
